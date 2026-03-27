@@ -1,5 +1,5 @@
 import { auth } from '@clerk/nextjs/server'
-import prisma from "@/lib/prisma";
+import prisma from '@/lib/prisma';
 
 export async function GET(_request: Request, ctx: RouteContext<'/api/[id]'>) {
   const { userId } = await auth();

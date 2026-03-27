@@ -1,6 +1,6 @@
 import { auth } from '@clerk/nextjs/server'
 import { GoogleGenAI } from "@google/genai";
-import prisma from "@/lib/prisma";
+import prisma from '@/lib/prisma';
 
 const apiKey = process.env.GEMINI_API_KEY;
 

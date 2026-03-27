@@ -46,7 +46,7 @@ export const AppSidebar = ({ children }: PropsWithChildren) => {
 
     fetchQuizzes();
   }, []);
-
+  
   return (
     <SidebarProvider open={isOpen} onOpenChange={setIsOpen}>
       <Sidebar className="pt-14" collapsible="icon">
