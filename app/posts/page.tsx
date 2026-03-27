@@ -1,17 +1,7 @@
 import prisma from "@/lib/prisma";
 
-interface PostWithAuthor {
-  id: number;
-  title: string;
-  content: string | null;
-  published: boolean;
-  author: {
-    name: string | null;
-  };
-}
-
 export default async function Posts() {
-  const posts: PostWithAuthor[] = await prisma.post.findMany({
+  const posts = await prisma.post.findMany({
     include: {
       author: true,
     },
@@ -23,11 +13,11 @@ export default async function Posts() {
         Posts
       </h1>
       <ul className="font-[family-name:var(--font-geist-sans)] max-w-2xl space-y-4">
-        {posts.map((post: PostWithAuthor) => (
+        {posts.map((post: any) => (
           <li key={post.id}>
             <span className="font-semibold">{post.title}</span>
             <span className="text-sm text-gray-600 ml-2">
-              by {post.author.name || "Unknown"}
+              by {post.author.name}
             </span>
           </li>
         ))}
