@@ -63,13 +63,13 @@ const Home = () => {
   };
 
   return (
-    <div className="h-full w-full flex justify-center items-center bg-linear-to-br from-slate-50 to-slate-100 p-8">
+    <div className="h-screen w-full flex justify-center items-center bg-gradient-to-br from-slate-50 to-slate-100 p-6">
       <div className="w-full max-w-2xl mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-2xl font-bold text-slate-900">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">
             Quiz Summary Generator
           </h1>
-          <p className="text-slate-600 mb-8 text-xs">
+          <p className="text-slate-500 mb-8 text-sm">
             Generate AI-powered quizzes from your content
           </p>
 
@@ -103,7 +103,7 @@ const Home = () => {
             <Button
               onClick={handleGenerateSummary}
               disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition"
             >
               {loading ? "Creating Quiz..." : "Generate Quiz"}
             </Button>
